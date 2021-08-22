@@ -1,7 +1,8 @@
-//3d3c50d2cc6960668ccaab7656cc36f3
-//api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
+
+//api.openweathermap.org/data/2.5/weather?q={city name}&appid=3d3c50d2cc6960668ccaab7656cc36f3
 let btnPol = document.querySelector(".poltava");
 let btnKha = document.querySelector(".kharkov");
+let btnKiev = document.querySelector(".kiev");
 
 
 
@@ -9,6 +10,7 @@ function ShowWeather(string1) {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${string1}&appid=3d3c50d2cc6960668ccaab7656cc36f3`)
         .then(function (resp) { return resp.json() })
         .then(function (data) {
+
             console.log(data);
 
             document.querySelector(".city-name").textContent = `${data.name}, ${data.sys.country}`;
@@ -26,6 +28,13 @@ function ShowWeather(string1) {
             //catch any errors
         })
 }
-btnPol.addEventListener('click', ShowWeather("Poltava, UA"));
-btnKha.addEventListener('click', ShowWeather("London, UK"));
+
+function abc() {
+    console.log("GG WP");
+}
+ShowWeather("Poltava, UA");
+
+btnPol.addEventListener('click', function () { ShowWeather("Poltava, UA"); });
+btnKha.addEventListener('click', function () { ShowWeather("Kharkiv, UA"); });
+btnKiev.addEventListener('click', function () { ShowWeather("Kiev, UA"); });
 
