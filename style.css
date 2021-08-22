@@ -75,6 +75,6 @@ button:hover{
 /*МЕДИА*/
 @media (max-width: 700px){
     .weather{
-        width:100%;
+        width:100vw;
     }
 }
