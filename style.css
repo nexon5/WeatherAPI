@@ -69,3 +69,9 @@ button:hover{
     background:linear-gradient(175deg, rgba(71,230,65,1) 0%, rgba(20,255,24,1) 100%);
     box-shadow: 9px 9px 5px -7px rgba(34, 60, 80, 0.6);
 }
+/*МЕДИА*/
+@media (max-width: 700px){
+    .weather{
+        width:100%;
+    }
+}
